@@ -1,0 +1,55 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/user/RiderProjects/NotebookContainerApp/UI/UI.csproj": {}
+  },
+  "projects": {
+    "/Users/user/RiderProjects/NotebookContainerApp/UI/UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/user/RiderProjects/NotebookContainerApp/UI/UI.csproj",
+        "projectName": "UI",
+        "projectPath": "/Users/user/RiderProjects/NotebookContainerApp/UI/UI.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/RiderProjects/NotebookContainerApp/UI/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/Users/user/.dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/user/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/Users/user/RiderProjects/NotebookContainerApp/Logic/bin/Debug/netcoreapp2.2/Logic.deps.json
+/Users/user/RiderProjects/NotebookContainerApp/Logic/bin/Debug/netcoreapp2.2/Logic.dll
+/Users/user/RiderProjects/NotebookContainerApp/Logic/bin/Debug/netcoreapp2.2/Logic.pdb
+/Users/user/RiderProjects/NotebookContainerApp/Logic/bin/Debug/netcoreapp2.2/Attributes.dll
+/Users/user/RiderProjects/NotebookContainerApp/Logic/bin/Debug/netcoreapp2.2/Attributes.pdb
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.csprojAssemblyReference.cache
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.csproj.CoreCompileInputs.cache
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.AssemblyInfoInputs.cache
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.AssemblyInfo.cs
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.csproj.CopyComplete
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.dll
+/Users/user/RiderProjects/NotebookContainerApp/Logic/obj/Debug/netcoreapp2.2/Logic.pdb

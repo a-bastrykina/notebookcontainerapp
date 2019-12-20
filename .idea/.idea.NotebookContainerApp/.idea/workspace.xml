@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d8fdaad6-b1fc-4852-b3cf-cc37c6f1144d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Notebook/Notebook/CommandReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotebookTests/NotebookTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/CommandParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Note/StudentNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Attributes/Attributes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Note/PhoneNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/HelloWorld.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotebookTests/Mock/TextReaderMock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/AddNoteCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/CommandReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/DeserializeNotebookCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Note/NoteFactory/INoteFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/INoteStorage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Note/INote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Note/NoteFactory/PhoneNoteFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C18677B9-B919-4E08-AB80-04864BD16317/b1/af38b9b8/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/INotebookCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/INotebook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Note/NoteFactory/StudentNoteFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/ListNotebookCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/MyList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/MyListNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Notebook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Starter/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/RemoveNoteCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/NotebookCommand/SerializeNotebookCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1D58DA46-A679-4DBD-82C9-11F7A98B474C/c3/5b567517/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Container/Container.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1D58DA46-A679-4DBD-82C9-11F7A98B474C/23/dd021724/SyncTextReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotebookTests/NoteTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/088051FB-72DE-4607-81C4-D1937DDE71E2/e0/dd321943/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UI/App.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotebookTests/Mock/TextWriterMock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/088051FB-72DE-4607-81C4-D1937DDE71E2/42/260aa875/RuntimeParameterInfo.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Logic/Class1.cs" />
+        <option value="$PROJECT_DIR$/Logic/SerializeNotebookCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/RemoveNoteCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/DeserializeNotebookCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/AddNoteCommand.cs" />
+        <option value="$PROJECT_DIR$/Attributes/Class1.cs" />
+        <option value="$PROJECT_DIR$/Container/Class1.cs" />
+        <option value="$PROJECT_DIR$/Logic/INoteStorage.cs" />
+        <option value="$PROJECT_DIR$/Logic/INote.cs" />
+        <option value="$PROJECT_DIR$/Logic/Starter.cs" />
+        <option value="$PROJECT_DIR$/../Notebook/Notebook/CommandReader.cs" />
+        <option value="$PROJECT_DIR$/Starter/Program.cs" />
+        <option value="$PROJECT_DIR$/Logic/Notebook.cs" />
+        <option value="$PROJECT_DIR$/Logic/CommandParser.cs" />
+        <option value="$PROJECT_DIR$/Logic/NotebookCommand/HelloWorld.cs" />
+        <option value="$PROJECT_DIR$/Logic/NotebookCommand/DeserializeNotebookCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/NotebookCommand/ListNotebookCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/NotebookCommand/SerializeNotebookCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/INote.cs" />
+        <option value="$PROJECT_DIR$/Container/Container.cs" />
+        <option value="$PROJECT_DIR$/Logic/INotebook.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/NoteFactory/PhoneNote.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/NoteFactory/StudentNote.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/PhoneNote.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/StudentNote.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/NoteFactory/INoteFactory.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/NoteFactory/PhoneNoteFactory.cs" />
+        <option value="$PROJECT_DIR$/Logic/Note/NoteFactory/StudentNoteFactory.cs" />
+        <option value="$PROJECT_DIR$/NotebookTests/Program.cs" />
+        <option value="$PROJECT_DIR$/NotebookTests/NoteTests.cs" />
+        <option value="$PROJECT_DIR$/NotebookTests/Mock/TestReaderMock.cs" />
+        <option value="$PROJECT_DIR$/NotebookTests/Mock/TextReaderMock.cs" />
+        <option value="$PROJECT_DIR$/Starter/Starter.csproj" />
+        <option value="$PROJECT_DIR$/Logic/Logic.csproj" />
+        <option value="$PROJECT_DIR$/Container/Container.csproj" />
+        <option value="$PROJECT_DIR$/Attributes/Attributes.csproj" />
+        <option value="$PROJECT_DIR$/NotebookTests/NotebookTests.csproj" />
+        <option value="$PROJECT_DIR$/UI/UI.csproj" />
+        <option value="$PROJECT_DIR$/UI/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/NotebookTests/Mock/TextWriterMock.cs" />
+        <option value="$PROJECT_DIR$/Logic/NotebookCommand/RemoveNoteCommand.cs" />
+        <option value="$PROJECT_DIR$/Logic/NotebookCommand/AddNoteCommand.cs" />
+        <option value="$PROJECT_DIR$/NotebookTests/NotebookTests.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1RSfkXSdGKI3Rci3gBC3lVve5sl" />
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Starter">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/UI/bin/Debug/netcoreapp3.0/UI.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UI/bin/Debug/netcoreapp3.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/UI/UI.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.0" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Starter" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Starter/Starter.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.0" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Project.Starter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8fdaad6-b1fc-4852-b3cf-cc37c6f1144d" name="Default Changelist" comment="" />
+      <created>1569665560729</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569665560729</updated>
+      <workItem from="1569665562221" duration="3480000" />
+      <workItem from="1570249755201" duration="17811000" />
+      <workItem from="1572069296725" duration="5690000" />
+      <workItem from="1573292422913" duration="5359000" />
+      <workItem from="1574501780960" duration="432000" />
+      <workItem from="1574502395253" duration="885000" />
+      <workItem from="1574503604540" duration="346000" />
+      <workItem from="1574504359303" duration="329000" />
+      <workItem from="1574504851086" duration="1512000" />
+      <workItem from="1576321992380" duration="4852000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <reveal-manager>
+      <revealed-members>
+        <RevealItemInfo typeName="Notebook.Notebook" fieldName="Notes" />
+        <RevealItemInfo typeName="Notebook.Notebook" fieldName="Notes (INotebook)" />
+      </revealed-members>
+    </reveal-manager>
+  </component>
+</project>

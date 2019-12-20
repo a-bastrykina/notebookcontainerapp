@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.4.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.api.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_NotebookContainerApp.-186084646.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Attributes" t="IncludeRecursive">
+        <e p="Attributes.cs" t="Include" />
+        <e p="Attributes.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Attributes.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Container" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Container.cs" t="Include" />
+        <e p="Container.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Container.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Logic" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CommandParser.cs" t="Include" />
+        <e p="INotebook.cs" t="Include" />
+        <e p="INoteStorage.cs" t="Include" />
+        <e p="Logic.csproj" t="IncludeRecursive" />
+        <e p="Note" t="Include">
+          <e p="INote.cs" t="Include" />
+          <e p="NoteFactory" t="Include">
+            <e p="INoteFactory.cs" t="Include" />
+            <e p="PhoneNoteFactory.cs" t="Include" />
+            <e p="StudentNoteFactory.cs" t="Include" />
+          </e>
+          <e p="PhoneNote.cs" t="Include" />
+          <e p="StudentNote.cs" t="Include" />
+        </e>
+        <e p="Notebook.cs" t="Include" />
+        <e p="NotebookCommand" t="Include">
+          <e p="AddNoteCommand.cs" t="Include" />
+          <e p="DeserializeNotebookCommand.cs" t="Include" />
+          <e p="HelloWorld.cs" t="Include" />
+          <e p="INotebookCommand.cs" t="Include" />
+          <e p="ListNotebookCommand.cs" t="Include" />
+          <e p="RemoveNoteCommand.cs" t="Include" />
+          <e p="SerializeNotebookCommand.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Logic.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="NotebookContainerApp.sln" t="IncludeFlat" />
+      <e p="NotebookTests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Mock" t="Include">
+          <e p="TextReaderMock.cs" t="Include" />
+          <e p="TextWriterMock.cs" t="Include" />
+        </e>
+        <e p="NotebookTests.cs" t="Include" />
+        <e p="NotebookTests.csproj" t="IncludeRecursive" />
+        <e p="NoteTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="NotebookTests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Starter" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Starter.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Starter.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="UI" t="IncludeRecursive">
+        <e p="UI.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

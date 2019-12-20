@@ -1,0 +1,8 @@
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/bin/Debug/netcoreapp3.0/Attributes.deps.json
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/bin/Debug/netcoreapp3.0/Attributes.dll
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/bin/Debug/netcoreapp3.0/Attributes.pdb
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/obj/Debug/netcoreapp3.0/Attributes.csprojAssemblyReference.cache
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/obj/Debug/netcoreapp3.0/Attributes.AssemblyInfoInputs.cache
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/obj/Debug/netcoreapp3.0/Attributes.AssemblyInfo.cs
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/obj/Debug/netcoreapp3.0/Attributes.dll
+/Users/user/RiderProjects/NotebookContainerApp/Attributes/obj/Debug/netcoreapp3.0/Attributes.pdb
