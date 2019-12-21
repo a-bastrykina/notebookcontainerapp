@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Attributes;
 
 namespace Logic.UserInterface
 {
-    public interface AddCommandUserInput
+    [ContainerElement]
+    public interface AddCommandInput
     {
-        public string GetCommandType();
-        public INote GetNote();
+        INote GetNote();
     }
 }

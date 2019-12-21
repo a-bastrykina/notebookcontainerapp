@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Logic.UserInterface
 {
-    interface DesrializeCommandUserInterface
+    public interface RemoveCommandInput
     {
+        int GetRemoveNoteIndex();
+        void ReportInvalidIndex();
     }
+    
 }

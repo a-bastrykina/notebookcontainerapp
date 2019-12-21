@@ -1,4 +1,5 @@
 using System;
+using Logic.UserInterface;
 
 namespace Notebook
 {
@@ -6,20 +7,17 @@ namespace Notebook
     public class ListNotebookCommand: INotebookCommand
     {
         private INotebook _notebook;
+        private ListCommandInput _input;
         
-        public ListNotebookCommand(INotebook notebook)
+        public ListNotebookCommand(INotebook notebook, ListCommandInputFactory inputFactory)
         {
+            _input = inputFactory.GetInput();
             _notebook = notebook;
         }
         
         public void Execute()
         {
-            int i = 1;
-            foreach (var item in _notebook.Notes)
-            {
-                Console.WriteLine($"{i}. {item.ToString()}");
-                i++;
-            }
+            _input.ListNotes(_notebook.Notes);
         }
     }
 }

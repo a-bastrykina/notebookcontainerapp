@@ -1,25 +1,26 @@
 using System;
+using Logic.UserInterface;
 
 namespace Notebook
 {
     [Attributes.ContainerElement]
     public class RemoveNoteCommand : INotebookCommand
     {
-        private readonly INotebook _notebook;
+        private INotebook _notebook;
+        private RemoveCommandInput _input;
 
-        public RemoveNoteCommand(INotebook notebook)
+        public RemoveNoteCommand(INotebook notebook, RemoveCommandInputFactory inputFactory)
         {
+            _input = inputFactory.GetInput();
             _notebook = notebook;
         }
         
         public void Execute()
         {
-            Console.WriteLine("Enter note to remove: ");
-            var note = Console.ReadLine();
-            var index = _notebook.Notes.FindIndex(n =>  n.ToString().Equals(note) );
-            if (index < 0)
+            var index = _input.GetRemoveNoteIndex();
+            if (index < 0 || index >= _notebook.Notes.Count)
             {
-                Console.WriteLine("Can't find such note");
+                _input.ReportInvalidIndex();
                 return;
             }
             _notebook.Notes.RemoveAt(index);

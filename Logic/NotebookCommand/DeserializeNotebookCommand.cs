@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Logic.UserInterface;
 using Newtonsoft.Json;
 
 namespace Notebook
@@ -8,22 +9,30 @@ namespace Notebook
     [Attributes.ContainerElement]
     public class DeserializeNotebookCommand : INotebookCommand
     {
-        private INotebook _notebook;
-        public DeserializeNotebookCommand(INotebook notebook)
+        private readonly INotebook _notebook;
+        private readonly DeserializeCommandInput _input;
+        public DeserializeNotebookCommand(INotebook notebook, DeserializeCommandInputFactory inputFactory)
         {
+            _input = inputFactory.GetInput();
             _notebook = notebook;
         }
         
         public void Execute()
         {
-            Console.Write("Enter path to load notebook: ");
-            var filePath = Console.ReadLine();
-            using (var sr = new StreamReader(filePath))
+            var filePath = _input.GetFileName();
+            try
             {
-                var settings = new JsonSerializerSettings {TypeNameHandling = TypeNameHandling.All};
-                var serialized = sr.ReadToEnd();
-                var deserializedNotebook = JsonConvert.DeserializeObject<List<INote>>(serialized, settings);
-                _notebook.Notes = deserializedNotebook;
+                using (var sr = new StreamReader(filePath))
+                {
+                    var settings = new JsonSerializerSettings {TypeNameHandling = TypeNameHandling.All};
+                    var serialized = sr.ReadToEnd();
+                    var deserializedNotebook = JsonConvert.DeserializeObject<List<INote>>(serialized, settings);
+                    _notebook.Notes = deserializedNotebook;
+                }
+            }
+            catch (Exception)
+            {
+                _input.ReportProblemsWithDeserialization();
             }
         }
     }

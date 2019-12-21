@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Reflection.Metadata;
+using Logic.UserInterface;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -10,25 +11,34 @@ namespace Notebook
     public class SerializeNotebookCommand : INotebookCommand
     {
         private INotebook _notebook;
-        public SerializeNotebookCommand(INotebook notebook)
+        private SerializeCommandInput _input;
+        public SerializeNotebookCommand(INotebook notebook, SerializeCommandInputFactory inputFactory)
         {
+            _input = inputFactory.GetInput();
             _notebook = notebook;
         }
         
         public void Execute()
         {
-            Console.WriteLine("Enter path to save notebook: ");
-            var filePath = Console.ReadLine();
+            var filePath = _input.GetFileName();
             
             JsonSerializer serializer = new JsonSerializer();
             serializer.TypeNameHandling = TypeNameHandling.All;
             serializer.NullValueHandling = NullValueHandling.Ignore;
             serializer.Converters.Add(new JavaScriptDateTimeConverter());
-            
-            using (StreamWriter sw = new StreamWriter(filePath))
-            using (JsonWriter writer = new JsonTextWriter(sw))
+
+
+            try
             {
-                serializer.Serialize(writer, _notebook.Notes);
+                using (StreamWriter sw = new StreamWriter(filePath))
+                using (JsonWriter writer = new JsonTextWriter(sw))
+                {
+                    serializer.Serialize(writer, _notebook.Notes);
+                }
+            }
+            catch (Exception)
+            {
+                _input.ReportProblemsWithSerialization();
             }
         }
     }
