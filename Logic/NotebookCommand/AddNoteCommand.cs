@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Attributes;
+using Logic.UserInterface;
 using Notebook.NoteFactory;
 
 namespace Notebook
@@ -11,14 +12,9 @@ namespace Notebook
     {
         private INotebook _notebook;
         private Dictionary<string, INoteFactory> _noteFactories = new Dictionary<string, INoteFactory>();
-        public AddNoteCommand(List<INoteFactory> noteFactories, INotebook notebook)
+        public AddNoteCommand(List<INoteFactory> noteFactories, INotebook notebook, AddCommandUserInput userInput)
         {
             _noteFactories = noteFactories.ToDictionary(x => x.TypeName);
-//            foreach (var fact in noteFactories)
-//            {
-//                _noteFactories[fact.TypeName] = fact;
-//            }
-
             _notebook = notebook;
         }
 
