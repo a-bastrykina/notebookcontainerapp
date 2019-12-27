@@ -2,13 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Attributes;
 using Notebook.NoteFactory;
 
 namespace Logic.UserInterface
 {
-    [ContainerElement]
+    [Attributes.ConsoleElement]
     class AddCommandConsoleInput : AddCommandInput
     {
         private Dictionary<string, INoteFactory> _noteFactories = new Dictionary<string, INoteFactory>();

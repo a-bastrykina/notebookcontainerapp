@@ -6,7 +6,7 @@ namespace Starter
     {
         static void Main(string[] args)
         {
-            CommandParser parser = Container.Container.Create<CommandParser>();
+            CommandParser parser = Container.Container.Create<CommandParser, Attributes.ConsoleElement>();
             parser.Start();
         }
     }

@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 
 namespace Notebook
 {
-    [Attributes.ContainerElement]
+    [Attributes.CommonElement]
     public class DeserializeNotebookCommand : INotebookCommand
     {
         private readonly INotebook _notebook;
         private readonly DeserializeCommandInput _input;
-        public DeserializeNotebookCommand(INotebook notebook, DeserializeCommandInputFactory inputFactory)
+        public DeserializeNotebookCommand(INotebook notebook, DeserializeCommandInput input)
         {
-            _input = inputFactory.GetInput();
+            _input = input;
             _notebook = notebook;
         }
         

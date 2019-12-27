@@ -3,15 +3,15 @@ using Logic.UserInterface;
 
 namespace Notebook
 {
-    [Attributes.ContainerElement]
+    [Attributes.CommonElement]
     public class ListNotebookCommand: INotebookCommand
     {
-        private INotebook _notebook;
-        private ListCommandInput _input;
+        private readonly INotebook _notebook;
+        private readonly ListCommandInput _input;
         
-        public ListNotebookCommand(INotebook notebook, ListCommandInputFactory inputFactory)
+        public ListNotebookCommand(INotebook notebook, ListCommandInput input)
         {
-            _input = inputFactory.GetInput();
+            _input = input;
             _notebook = notebook;
         }
         

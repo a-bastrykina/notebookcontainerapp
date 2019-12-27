@@ -1,6 +1,3 @@
-using System;
-using System.Runtime.Serialization;
-using Attributes;
 using Newtonsoft.Json;
 
 namespace Notebook

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Notebook
 {
-    [Attributes.ContainerElement]
+    [Attributes.ConsoleElement]
     public class CommandParser
     {
-        private Dictionary<string, INotebookCommand> _commands = new Dictionary<string, INotebookCommand>();
+        private readonly Dictionary<string, INotebookCommand> _commands = new Dictionary<string, INotebookCommand>();
         public CommandParser(List<INotebookCommand> commands)
         {
             foreach (var cmd in commands)

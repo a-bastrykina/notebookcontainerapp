@@ -4,6 +4,7 @@ using Notebook;
 
 namespace Logic.UserInterface
 {
+    [Attributes.ConsoleElement]
     public class ListCommandConsoleInput : ListCommandInput
     {
         public void ListNotes(List<INote> notes)

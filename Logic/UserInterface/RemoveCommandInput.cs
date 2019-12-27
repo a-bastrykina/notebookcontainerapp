@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Logic.UserInterface
 {
+    [Attributes.CommonElement]
     public interface RemoveCommandInput
     {
         int GetRemoveNoteIndex();

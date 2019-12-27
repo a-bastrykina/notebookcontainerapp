@@ -10,15 +10,15 @@ namespace Container
     public class Container
     {
         private static readonly List<Type> _visitedElements = new List<Type>();
-        private static readonly Dictionary<Type, Object> _createdObjects = new Dictionary<Type, object>();
+        private static readonly Dictionary<Type, object> _createdObjects = new Dictionary<Type, object>();
         private static readonly List<Type> _containerElements = new List<Type>();
 
-        public static T Create<T>()
+        public static T Create<T, BuildAttr>()
         {
             var assemblies = Assembly.Load("Logic");
             foreach (var cls in assemblies.GetTypes())
             {
-                if (Attribute.IsDefined(cls, typeof(ContainerElement)))
+                if (Attribute.IsDefined(cls, typeof(CommonElement)) || Attribute.IsDefined(cls, typeof(BuildAttr)))
                 {
                     _containerElements.Add(cls);
                 }
@@ -63,6 +63,9 @@ namespace Container
                 {
                     var impl = GetFirstInterfaceRealization(param.ParameterType);
                     Build(impl);
+                    _createdObjects[param.ParameterType] = _createdObjects[impl];
+                    _createdObjects.Remove(impl);
+                    continue;
                 }
                 
                 if (param.ParameterType.IsGenericType &&
@@ -79,7 +82,15 @@ namespace Container
                 }
                 else
                 {
-                    Build(param.ParameterType);
+//                    if (param.ParameterType.IsInterface)
+//                    {
+//                        var impl = GetFirstInterfaceRealization(param.ParameterType);
+//                        Build(impl);
+//                    }
+//                    else
+//                    {
+                        Build(param.ParameterType);
+//                    }
                 }
             }
 

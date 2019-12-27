@@ -2,7 +2,7 @@ using Attributes;
 
 namespace Notebook.NoteFactory
 {
-    [ContainerElement]
+    [CommonElement]
     public class PhoneNoteFactory: INoteFactory
     {
         public string TypeName { get; } = "PhoneNote";

@@ -1,20 +1,17 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using Attributes;
 using Logic.UserInterface;
-using Notebook.NoteFactory;
+
 
 namespace Notebook
 {
-    [ContainerElement]
+    [Attributes.CommonElement]
     public class AddNoteCommand : INotebookCommand
     {
-        private INotebook _notebook;
-        private AddCommandInput _input;
-        public AddNoteCommand(INotebook notebook, AddCommandInputFactory inputFactory)
+        private readonly INotebook _notebook;
+        private readonly AddCommandInput _input;
+        public AddNoteCommand(INotebook notebook, AddCommandInput input)
         {
-            _input = inputFactory.GetInput();
+            _input = input;
             _notebook = notebook;
         }
         

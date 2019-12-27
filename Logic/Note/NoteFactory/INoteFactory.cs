@@ -1,8 +1,6 @@
-using Attributes;
-
 namespace Notebook.NoteFactory
 {
-    [ContainerElement]
+    [Attributes.CommonElement]
     public interface INoteFactory
     {
         string TypeName { get; }

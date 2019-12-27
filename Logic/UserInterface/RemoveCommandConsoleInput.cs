@@ -2,6 +2,7 @@ using System;
 
 namespace Logic.UserInterface
 {
+    [Attributes.ConsoleElement]
     public class RemoveCommandConsoleInput : RemoveCommandInput
     {
         public int GetRemoveNoteIndex()

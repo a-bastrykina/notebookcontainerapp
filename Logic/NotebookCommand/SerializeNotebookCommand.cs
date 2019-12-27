@@ -7,34 +7,33 @@ using Newtonsoft.Json.Converters;
 
 namespace Notebook
 {
-    [Attributes.ContainerElement]
+    [Attributes.CommonElement]
     public class SerializeNotebookCommand : INotebookCommand
     {
-        private INotebook _notebook;
-        private SerializeCommandInput _input;
-        public SerializeNotebookCommand(INotebook notebook, SerializeCommandInputFactory inputFactory)
+        private readonly INotebook _notebook;
+        private readonly SerializeCommandInput _input;
+        public SerializeNotebookCommand(INotebook notebook, SerializeCommandInput input)
         {
-            _input = inputFactory.GetInput();
+            _input = input;
             _notebook = notebook;
         }
         
         public void Execute()
         {
             var filePath = _input.GetFileName();
-            
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.TypeNameHandling = TypeNameHandling.All;
-            serializer.NullValueHandling = NullValueHandling.Ignore;
+
+            var serializer = new JsonSerializer
+            {
+                TypeNameHandling = TypeNameHandling.All, NullValueHandling = NullValueHandling.Ignore
+            };
             serializer.Converters.Add(new JavaScriptDateTimeConverter());
 
 
             try
             {
-                using (StreamWriter sw = new StreamWriter(filePath))
-                using (JsonWriter writer = new JsonTextWriter(sw))
-                {
-                    serializer.Serialize(writer, _notebook.Notes);
-                }
+                using var sw = new StreamWriter(filePath);
+                using JsonWriter writer = new JsonTextWriter(sw);
+                serializer.Serialize(writer, _notebook.Notes);
             }
             catch (Exception)
             {
