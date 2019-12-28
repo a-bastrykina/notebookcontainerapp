@@ -25,7 +25,7 @@ namespace Notebook
 
         public override string ToString()
         {
-            return Name + ", " + Phone;
+            return $"Name: {Name}, phone number: {Phone}";
         }
 
         private bool Equals(PhoneNote another)

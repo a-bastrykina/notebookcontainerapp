@@ -5,5 +5,7 @@ namespace Notebook.NoteFactory
     {
         string TypeName { get; }
         INote createFromCommandLine(string content);
+
+        INote createFromKeyValue(string key, string value);
     }
 }

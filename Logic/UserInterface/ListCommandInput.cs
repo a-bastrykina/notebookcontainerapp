@@ -3,7 +3,7 @@ using Notebook;
 
 namespace Logic.UserInterface
 {
-    [Attributes.CommonElement]
+    [Attributes.ConsoleElement]
     public interface ListCommandInput
     {
         void ListNotes(List<INote> notes);

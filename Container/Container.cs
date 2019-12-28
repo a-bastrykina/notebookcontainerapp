@@ -15,8 +15,9 @@ namespace Container
 
         public static T Create<T, BuildAttr>()
         {
-            var assemblies = Assembly.Load("Logic");
-            foreach (var cls in assemblies.GetTypes())
+            var types = Assembly.Load("Logic").GetTypes().ToList();
+            types.AddRange(Assembly.Load("NotebookUI").GetTypes());
+            foreach (var cls in types)
             {
                 if (Attribute.IsDefined(cls, typeof(CommonElement)) || Attribute.IsDefined(cls, typeof(BuildAttr)))
                 {

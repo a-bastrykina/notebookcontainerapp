@@ -27,7 +27,8 @@ namespace Notebook
                     var settings = new JsonSerializerSettings {TypeNameHandling = TypeNameHandling.All};
                     var serialized = sr.ReadToEnd();
                     var deserializedNotebook = JsonConvert.DeserializeObject<List<INote>>(serialized, settings);
-                    _notebook.Notes = deserializedNotebook;
+                    _notebook.Notes.Clear();
+                    _notebook.Notes.AddRange(deserializedNotebook);
                 }
             }
             catch (Exception)

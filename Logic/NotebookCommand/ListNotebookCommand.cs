@@ -3,7 +3,7 @@ using Logic.UserInterface;
 
 namespace Notebook
 {
-    [Attributes.CommonElement]
+    [Attributes.ConsoleElement]
     public class ListNotebookCommand: INotebookCommand
     {
         private readonly INotebook _notebook;

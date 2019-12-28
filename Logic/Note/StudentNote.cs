@@ -24,7 +24,7 @@ namespace Notebook
 
         public override string ToString()
         {
-            return Name + ", " + Group;
+            return $"Student name: {Name}, group: {Group}";
         }
 
         private bool Equals(StudentNote another)

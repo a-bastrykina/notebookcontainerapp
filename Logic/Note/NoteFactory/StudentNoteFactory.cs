@@ -11,5 +11,10 @@ namespace Notebook.NoteFactory
         {
             return new StudentNote(content);
         }
+
+        public INote createFromKeyValue(string key, string value)
+        {
+            return new StudentNote(key, value);
+        }
     }
 }
