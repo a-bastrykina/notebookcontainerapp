@@ -1,4 +1,5 @@
-﻿using Notebook;
+﻿using System.Diagnostics;
+using Notebook;
 
 namespace Starter
 {
@@ -7,6 +8,7 @@ namespace Starter
         static void Main(string[] args)
         {
             CommandParser parser = Container.Container.Create<CommandParser, Attributes.ConsoleElement>();
+            Debug.Assert(parser != null, nameof(parser) + " != null");
             parser.Start();
         }
     }

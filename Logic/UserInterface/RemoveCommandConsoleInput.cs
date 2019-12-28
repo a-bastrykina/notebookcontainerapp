@@ -8,7 +8,7 @@ namespace Logic.UserInterface
         public int GetRemoveNoteIndex()
         {
             Console.WriteLine("Enter note to remove: ");
-            return Int32.Parse(Console.ReadLine());
+            return Int32.Parse(Console.ReadLine() ?? throw new NullReferenceException());
         }
 
         public void ReportInvalidIndex()

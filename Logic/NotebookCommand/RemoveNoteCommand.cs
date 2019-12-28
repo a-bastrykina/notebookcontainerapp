@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using Logic.UserInterface;
 
 namespace Notebook
@@ -6,10 +7,12 @@ namespace Notebook
     [Attributes.CommonElement]
     public class RemoveNoteCommand : INotebookCommand
     {
+        [NotNull]
         private readonly INotebook _notebook;
+        [NotNull]
         private readonly RemoveCommandInput _input;
 
-        public RemoveNoteCommand(INotebook notebook, RemoveCommandInput inputFactory)
+        public RemoveNoteCommand([NotNull] INotebook notebook, [NotNull] RemoveCommandInput inputFactory)
         {
             _input = inputFactory;
             _notebook = notebook;

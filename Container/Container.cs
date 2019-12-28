@@ -1,46 +1,53 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using Attributes;
+using JetBrains.Annotations;
 
 namespace Container
 {
     public class Container
     {
-        private static readonly List<Type> _visitedElements = new List<Type>();
-        private static readonly Dictionary<Type, object> _createdObjects = new Dictionary<Type, object>();
-        private static readonly List<Type> _containerElements = new List<Type>();
+        [NotNull]
+        private static readonly List<Type> VisitedElements = new List<Type>();
+        [NotNull]
+        private static readonly Dictionary<Type, object> CreatedObjects = new Dictionary<Type, object>();
+        [NotNull]
+        private static readonly List<Type> ContainerElements = new List<Type>();
 
-        public static T Create<T, BuildAttr>()
+        public static T Create<T, TBuildAttr>()
         {
-            var types = Assembly.Load("Logic").GetTypes().ToList();
-            types.AddRange(Assembly.Load("NotebookUI").GetTypes());
+            var types = Assembly.Load("Logic")?.GetTypes().ToList();
+            Debug.Assert(types != null, nameof(types) + " != null");
+//            types.AddRange(Assembly.Load("NotebookUI")?.GetTypes());
             foreach (var cls in types)
             {
-                if (Attribute.IsDefined(cls, typeof(CommonElement)) || Attribute.IsDefined(cls, typeof(BuildAttr)))
+                if (Attribute.IsDefined(cls, typeof(CommonElement)) || Attribute.IsDefined(cls, typeof(TBuildAttr)))
                 {
-                    _containerElements.Add(cls);
+                    ContainerElements.Add(cls);
                 }
             }
 
-            if (!_createdObjects.ContainsKey(typeof(T)))
+            if (!CreatedObjects.ContainsKey(typeof(T)))
             {
                 Build(typeof(T));
             }
 
-            return (T) _createdObjects[typeof(T)];
+            return (T) CreatedObjects[typeof(T)];
         }
 
         private static void Build(Type type)
         {
-            if (!_containerElements.Contains(type))
+            if (!ContainerElements.Contains(type))
             {
                 throw new ArgumentException($"{type} is not a container element");
             }
 
-            if (_createdObjects.ContainsKey(type)) return;
+            Debug.Assert(type != null, nameof(type) + " != null");
+            if (CreatedObjects.ContainsKey(type)) return;
 
             Console.WriteLine($"Started {type} build");
             var constructor = type.GetConstructors()[0];
@@ -48,14 +55,14 @@ namespace Container
 
             if (constructorParams.Length == 0)
             {
-                _createdObjects[type] = constructor.Invoke(null);
+                CreatedObjects[type] = constructor.Invoke(null);
                 return;
             }
 
-            _visitedElements.Add(type);
+            VisitedElements.Add(type);
             foreach (var param in constructorParams)
             {
-                if (_visitedElements.Contains(param.ParameterType))
+                if (VisitedElements.Contains(param.ParameterType))
                 {
                     throw new ArgumentException("Found cycle dependency");
                 }
@@ -64,8 +71,9 @@ namespace Container
                 {
                     var impl = GetFirstInterfaceRealization(param.ParameterType);
                     Build(impl);
-                    _createdObjects[param.ParameterType] = _createdObjects[impl];
-                    _createdObjects.Remove(impl);
+                    Debug.Assert(impl != null, nameof(impl) + " != null");
+                    CreatedObjects[param.ParameterType] = CreatedObjects[impl];
+                    CreatedObjects.Remove(impl);
                     continue;
                 }
                 
@@ -73,13 +81,15 @@ namespace Container
                     param.ParameterType.GetGenericTypeDefinition() == typeof(List<>))
                 {
                     var listInstance = (IList) Activator.CreateInstance(param.ParameterType);
-                    GetInterfaceRealizationsList(param.ParameterType).ForEach(t =>
+                    GetInterfaceRealizationsList(param.ParameterType)
+                        ?.ForEach(t =>
                     {
                         Build(t);
-                        listInstance.Add(_createdObjects[t]);
-                        _createdObjects.Remove(t);
+                        Debug.Assert(t != null, nameof(t) + " != null");
+                        listInstance.Add(CreatedObjects[t]);
+                        CreatedObjects.Remove(t);
                     });
-                    _createdObjects[param.ParameterType] = listInstance;
+                    CreatedObjects[param.ParameterType] = listInstance;
                 }
                 else
                 {
@@ -95,21 +105,22 @@ namespace Container
                 }
             }
 
-            _visitedElements.Clear();
+            VisitedElements.Clear();
             List<Object> parameterInstances = new List<object>();
             foreach (var param in constructorParams)
             {
-                parameterInstances.Add(_createdObjects[param.ParameterType]);
+                parameterInstances.Add(CreatedObjects[param.ParameterType]);
             }
 
-            _createdObjects[type] = constructor.Invoke(parameterInstances.ToArray());
+            CreatedObjects[type] = constructor.Invoke(parameterInstances.ToArray());
         }
 
-        private static List<Type> GetInterfaceRealizationsList(Type listType)
+        private static List<Type> GetInterfaceRealizationsList([NotNull] Type listType)
         {
+            Debug.Assert(listType.GenericTypeArguments != null, "listType.GenericTypeArguments != null");
             var interfaceType = listType.GenericTypeArguments[0];
             var implTypes = new List<Type>();
-            foreach (var type in _containerElements)
+            foreach (var type in ContainerElements)
             {
                 if (type.GetInterfaces().Contains(interfaceType))
                 {
@@ -122,7 +133,7 @@ namespace Container
 
         private static Type GetFirstInterfaceRealization(Type interfaceType)
         {
-            foreach (var type in _containerElements)
+            foreach (var type in ContainerElements)
             {
                 if (type.GetInterfaces().Contains(interfaceType))
                 {
